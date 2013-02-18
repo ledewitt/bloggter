@@ -10,3 +10,6 @@ rake db:create_migration NAME = "file_name"<- Creates the skeleton of the
 
 rake db:migrate      <- runs all migrations that haven't been run yet
 rake db:migrate:redo <- redoes all migrations in the db/migrate folder
+
+sqlite3 db/"database_name".rb <- Brings up sqlite console with database
+                                 as main
