@@ -1,0 +1,16 @@
+<h1>
+  <%= user.handle %>'s entries:  
+</h1>
+
+<form action="/<%= user.handle %>/bloggter" method="post">
+  <div><label for="entry">Entry:</label><br>
+  <input type="text"
+         name="entry"
+         id="entry"
+         size="284" /></div>
+  <div><input type="submit" value="Entry" /></div>
+</form>
+
+<% entries.each do |entry| %>
+  <div> <%= entry.body %> &mdash; <%= entry.created_at.strftime("%d %b, %Y %I:%M%p")%></div>  
+<% end %>

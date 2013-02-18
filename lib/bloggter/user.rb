@@ -5,7 +5,7 @@ module Bloggter
     validates_format_of     :handle, with: /\A[-A-Za-z0-9_]+\z/
     validates_uniqueness_of :handle
 
-    has_many :mweets
+    has_many :entries
 
     attr_accessible :handle
   end
