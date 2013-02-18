@@ -4,7 +4,7 @@ require "json"
 URL = "http://192.168.1.112:9393"
 
 # sending some data
-# p Typhoeus::Request.post("#{URL}/JEG2/mweeter", params: {mweet: "Test post."})
+# p Typhoeus::Request.post("#{URL}/JEG2/bloggter", params: {entry: "Test post."})
 
 # reading some data
 bloggters = Typhoeus::Request.get( "#{URL}/JEG2",

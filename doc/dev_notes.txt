@@ -1,0 +1,12 @@
+MISC -
+
+sqlite3 <- Unix console command to enter the sqlite console
+
+Database Notes -
+
+rake db:create_migration NAME = "file_name"<- Creates the skeleton of the 
+   											  migration file in
+                            				  db/migrate/
+
+rake db:migrate      <- runs all migrations that haven't been run yet
+rake db:migrate:redo <- redoes all migrations in the db/migrate folder
