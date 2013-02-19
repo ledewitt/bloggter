@@ -16,7 +16,8 @@ post("/") {
   if Bloggter::User.exists?(handle: user)
     redirect "/#{user}"
   else
-    redirect error
+    Bloggter::User.create(handle: user)
+    redirect "/#{user}"
   end
 }
 
