@@ -13,13 +13,11 @@ get("/") {
 post("/") {
   user = params[:user]
   
-  redirect "/#{user}"
-  
-  # if Bloggter::User.exists?(user)
-  #   redirect "/#{user}"
-  # else
-  #   redirect error
-  # end
+  if Bloggter::User.exists?(handle: user)
+    redirect "/#{user}"
+  else
+    redirect error
+  end
 }
 
 get("/:handle") {
